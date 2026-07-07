@@ -1,0 +1,70 @@
+# =====================================================================
+# Large / reproducible data
+# =====================================================================
+# SEC DERA raw downloads and extracted quarterly datasets (hundreds of MB
+# to several GB). Regenerated on demand by src/build_firm_financials_panel.py,
+# so they should never be committed. The small DERIVED datasets in data/
+# (macro, stock prices, firm_financials_panel/, firm_specific_factors,
+# composite_index) are kept and tracked.
+data/sec/
+
+# Also ignore any stray archive downloads anywhere in the tree.
+*.zip
+
+# =====================================================================
+# Python
+# =====================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.python-version
+references/
+writeup/
+# =====================================================================
+# Jupyter
+# =====================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# =====================================================================
+# LaTeX build artifacts (writeup/ is compiled locally)
+# =====================================================================
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+# minitoc / multibib side files
+*.mtc*
+*.maf
+*.ptc
+# To commit the compiled PDF (useful for reviewers), keep it tracked.
+# To ignore it instead, uncomment the next line:
+# writeup/*.pdf
+
+# =====================================================================
+# OS / editor
+# =====================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
